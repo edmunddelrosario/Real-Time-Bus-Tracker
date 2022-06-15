@@ -7,53 +7,46 @@ map = new mapboxgl.Map({
   center: [-71.091525, 42.353350],
   zoom: 12,
 });
-addMarkers();
-
-let markers = [];
-
-function addMarker(bus) {
-	let lng = bus.attributes.longitude;
-	let lat = bus.attributes.latitude;
-	let marker = new mapboxgl.Marker();
-		  marker.setLngLat([lng, lat]);
-		  marker.addTo(map);
-	markers.push(marker);
-}
-
-async function run(){  
-const locations = await getBusLocations();
-// Set time interval to request new data 
-setTimeout(run, 5000);
-}
 
 // Request bus data from MBTA
-async function getBusLocations(){
-const url = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
-const response = await fetch(url);
-const json     = await response.json();
-return json.data;
+async function busData(){
+	const url = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
+	const response = await fetch(url);
+	const json     = await response.json();
+	return json.data;
 }
 
-//get markers data from array
-function getMarker(id) {
-	let marker = markers.find((item) => {
-		return item.id === id;
-	});
-	return marker;
-}
+//set interval time to fetch data
+async function runInterval(){  
+	const locations = await busData();
+	// Set time interval to request new data 
+	setTimeout(run, 30000);
+	}
 
-//adding the bus markers to the map
-async function addMarkers(){
+//get bus location from data and mark bus location 
+async function markBusLocation(){
 
-	let locations = await getBusLocations();
-	locations.forEach(function(bus) {
-		let marker = getMarker(bus.id);
-		addMarker(bus);
+	let locations = await busData();
+	locations.forEach((bus) => {
+		addLocationMarker(bus);
 	});
 
 	//timer
-	setTimeout(addMarkers, 5000);
+	setTimeout(markBusLocation, 30000);
 }
+
+let markers = [];
+
+function addLocationMarker(bus) {
+	let lng = bus.attributes.longitude;
+	let lat = bus.attributes.latitude;
+	let marker = new mapboxgl.Marker();
+		marker.setLngLat([lng, lat]);
+		marker.addTo(map);
+	markers.push(marker);
+}
+
+markBusLocation();
  
 
 
