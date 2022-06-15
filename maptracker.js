@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibWFya3JvYmVydHMiLCJhIjoiY2ttM3B4eGkyMGFqZDJwbXdnMmY1NzIyNSJ9.6tfZpmiXf7ip35QT3zSfpQ'
+//mapboxgl.accessToken = 'pk.eyJ1IjoibWFya3JvYmVydHMiLCJhIjoiY2ttM3B4eGkyMGFqZDJwbXdnMmY1NzIyNSJ9.6tfZpmiXf7ip35QT3zSfpQ'
  
 //loading map to the browser
 map = new mapboxgl.Map({
