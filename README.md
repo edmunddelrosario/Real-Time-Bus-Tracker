@@ -5,10 +5,10 @@ Description:
 A bus tracker that plots the route of buses traveling in Boston, MA between MIT main campus and the Boston Medical center
 
 How to run:
-
-Option 1: https://htmlpreview.github.io/?https://github.com/edmunddelrosario/Real-Time-Bus-Tracker/blob/main/index.html
-Option 2: https://edmunddelrosario.github.io/Real-Time-Bus-Tracker
-Option 3: https://github.com/edmunddelrosario/Real-Time-Bus-Tracker
+<ul>
+  <li>Option 1: https://htmlpreview.github.io/?https://github.com/edmunddelrosario/Real-Time-Bus-Tracker/blob/main/index.html
+  <li>Option 2: https://edmunddelrosario.github.io/Real-Time-Bus-Tracker
+  <li>Option 3: https://github.com/edmunddelrosario/Real-Time-Bus-Tracker
 
 Roadmap:
 
