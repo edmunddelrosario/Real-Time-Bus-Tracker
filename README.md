@@ -6,7 +6,7 @@ A bus tracker that plots the route of buses traveling in Boston, MA between MIT 
 
 How to run:
 
-Visit https://jake-the-cake.github.io/school-work/portfolio/bus-tracker/index.html](https://htmlpreview.github.io/?https://github.com/edmunddelrosario/Real-Time-Bus-Tracker/blob/main/index.html
+Visit https://htmlpreview.github.io/?https://github.com/edmunddelrosario/Real-Time-Bus-Tracker/blob/main/index.html
 
 No installation required
 
