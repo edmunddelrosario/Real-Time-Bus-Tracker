@@ -23,7 +23,7 @@ function addMarker(bus) {
 async function run(){  
 const locations = await getBusLocations();
 // Set time interval to request new data 
-setTimeout(run, 15000);
+setTimeout(run, 5000);
 }
 
 // Request bus data from MBTA
@@ -52,7 +52,7 @@ async function addMarkers(){
 	});
 
 	//timer
-	setTimeout(addMarkers, 15000);
+	setTimeout(addMarkers, 5000);
 }
  
 
